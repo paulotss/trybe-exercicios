@@ -1,0 +1,8 @@
+Internet
+Unix
+Bash
+Ubuntu
+Linux
+Zoom
+Slack
+Trybe
