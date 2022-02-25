@@ -21,3 +21,23 @@ div:nth-child(6) {
 div:nth-child(7) {
     background-color: chocolate ;
 }
+
+div:nth-child(3) h3 {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+div:nth-child(4) h3 {
+    text-shadow: 2px 2px;
+}
+
+div:nth-child(5) h3 {
+    text-decoration: underline;
+}
+
+div:nth-child(6) h3 {
+    font-size: xx-large;
+}
+
+div:nth-child(7) h3  {
+    color: white;
+}
