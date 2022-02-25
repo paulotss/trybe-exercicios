@@ -9,3 +9,11 @@ li.par {
 li.impar {
     text-transform: uppercase;
 }
+
+h1, h3 {
+    color: red;
+}
+
+h1 em {
+    font-size: 40px;
+}
