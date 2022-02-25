@@ -1,6 +1,8 @@
 .super-mario {
     width: 200px;
     position: absolute;
+    top: 20px;
+    left: 20px;
     z-index: 2;
   }
   
@@ -8,16 +10,28 @@
     width: 100px;
     position: absolute;
     z-index: 1;
+    top: 350px;
+    left: 60px;
   }
   
   .baloon {
-  
+    position: absolute;
+    left: 250px;
+    top:20px;
+    z-index: 3;
   }
   
   .speach {
+    position: absolute;
+    top: 60px;
+    left: 280px;
     font-size: 25px;
+    z-index: 4;
   }
   
   .bowser {
     width: 200px;
+    position: absolute;
+    left: 500px;
+    top: 200px;
   }
