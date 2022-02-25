@@ -25,6 +25,7 @@ div:nth-child(7) {
 
 div:nth-child(3) h3 {
     font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
 }
 
 div:nth-child(4) h3 {
@@ -33,6 +34,7 @@ div:nth-child(4) h3 {
 
 div:nth-child(5) h3 {
     text-decoration: underline;
+    font-style: italic;
 }
 
 div:nth-child(6) h3 {
@@ -41,4 +43,5 @@ div:nth-child(6) h3 {
 
 div:nth-child(7) h3  {
     color: white;
+    font-style: italic;
 }
