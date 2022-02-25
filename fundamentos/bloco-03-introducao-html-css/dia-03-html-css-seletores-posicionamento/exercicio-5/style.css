@@ -1,3 +1,8 @@
+a {
+    color:black;
+    text-decoration: none;
+}
+
 ol li {
     background-color: yellow;
 }
@@ -26,18 +31,46 @@ li {
     font-size: 20px;
 }
 
-ul li:nth-child(1) {
+ul.linguagem li:nth-child(1) {
     color: blue;
 }
 
-ul li:nth-child(2) {
+ul.linguagem li:nth-child(2) {
     color: blue;
 }
 
-ul li:nth-child(3) {
+ul.linguagem li:nth-child(3) {
     color: blue;
 }
 
-ul li.java {
+ul.linguagem li.java {
     background-color: pink;
+}
+
+ul.sites li:hover {
+    font-weight: bold;
+}
+
+ul.sites li:hover {
+    font-weight: bold;
+}
+
+ul.sites li:nth-child(1) a:hover {
+    color: orange;
+}
+
+ul.sites li:nth-child(2) a:hover {
+    color: green;
+}
+
+ul.sites li:nth-child(3) a:hover {
+    color: black;
+}
+
+ul.sites li:nth-child(4) a:hover {
+    color: yellow;
+}
+
+ul.sites li:nth-child(5) a:hover {
+    color: yellowgreen;
 }
