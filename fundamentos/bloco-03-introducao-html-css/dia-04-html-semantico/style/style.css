@@ -8,3 +8,27 @@ header.titulo h1 {
     font-weight: bold;
     color:#fc0;
 }
+
+.menu ul {
+    padding: 0;
+}
+
+.menu li {
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.menu li:hover {
+    background-color: black;
+    cursor:pointer;
+}
+
+.menu li a {
+    text-decoration: none;
+    color:black;
+}
+
+.menu li:hover > a {
+    color:#fc0;
+}
