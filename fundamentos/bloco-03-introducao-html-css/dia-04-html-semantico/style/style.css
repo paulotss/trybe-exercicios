@@ -96,3 +96,13 @@ header.titulo h1 {
     background-color: #fc0;
     color:black;
 }
+
+footer {
+    background-color: #fc0;
+    padding:20px;
+    font-family:Helvetica, sans-serif;
+}
+
+footer h1 {
+    font-size: medium;
+}
