@@ -68,3 +68,31 @@ header.titulo h1 {
     float:left;
     margin-right: 10px;
 }
+
+.more {
+    float:right;
+    width: 20%;
+    background-color: black;
+    padding: 20px;
+    margin-top:20px;
+}
+
+.more h1 {
+    font-family: Helvetica, sans-serif;
+    margin-top: 0;
+    color:#fc0
+}
+
+.more a {
+    padding:10px;
+    text-align: center;
+    text-decoration: none;
+    color:#fc0;
+    border: 1px solid #fc0;
+    display: block;
+}
+
+.more a:hover {
+    background-color: #fc0;
+    color:black;
+}
