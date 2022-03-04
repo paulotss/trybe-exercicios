@@ -32,3 +32,39 @@ header.titulo h1 {
 .menu li:hover > a {
     color:#fc0;
 }
+
+.article {
+    padding:10px;
+}
+
+.article h1 {
+    font-family: Helvetica, monospace;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.section {
+    overflow: auto;
+    margin-bottom: 20px;
+}
+
+.section h1 {
+    font-family: Helvetica, monospace;
+    font-size: medium;
+    font-style: italic;
+}
+
+.detach {
+    font-weight: bold;
+}
+
+.section ul {
+    list-style-type:none;
+    padding: 0;
+}
+
+.section img {
+    width: 200px;
+    float:left;
+    margin-right: 10px;
+}
