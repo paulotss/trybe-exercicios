@@ -1,7 +1,7 @@
 const val = true;
 
 if (val === true) {
-    console.log(true);
+    console.log("positive");
 } else {
-    console.log(false)
+    console.log("negative")
 }
