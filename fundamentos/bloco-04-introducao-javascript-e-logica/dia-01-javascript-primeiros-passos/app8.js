@@ -1,7 +1,9 @@
-const val = true;
+const val = -8;
 
-if (val === true) {
+if (val > 0) {
     console.log("positive");
+} else if (val < 0) {
+    console.log("negative");
 } else {
-    console.log("negative")
+    console.log("zero");
 }
