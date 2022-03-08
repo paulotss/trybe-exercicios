@@ -15,3 +15,10 @@ console.log(soma);
 //Imprime média aritmética
 let media = soma / numbers.length;
 console.log(media);
+
+//Verifica se média é maior que 20
+if(media > 20) {
+    console.log("valor maior que 20");
+} else {
+    console.log("valor menor ou igual a 20");
+}
