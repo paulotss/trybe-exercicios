@@ -22,3 +22,23 @@ if(media > 20) {
 } else {
     console.log("valor menor ou igual a 20");
 }
+
+//Verifica maior valor no array
+let maior = false;
+let maiorResult = 0;
+for(i = 0; i < numbers.length; i += 1) {
+    for(j = 0; j < numbers.length; j += 1) {
+        if(numbers[i] < numbers[j]) {
+            maior = false;
+            break;
+        } else {
+            maior = true;
+        }
+    }
+    if(maior) {
+        maiorResult = numbers[i];
+        break;
+    }
+}
+
+console.log(maiorResult);
