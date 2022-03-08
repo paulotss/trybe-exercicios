@@ -77,3 +77,11 @@ for(i = 0; i < numbers.length; i += 1) {
 }
 
 console.log(resultMenor);
+
+//Cria array com 25 valores
+let numbers2 = [];
+for(i = 0; i < 25; i += 1) {
+    numbers2[i] = i + 1;
+}
+
+console.log(numbers2);
