@@ -56,3 +56,24 @@ if(impares > 0) {
 } else {
     console.log("Nenhum valor ímpar encontrado");
 }
+
+//Retorna menor número no array
+let menor = false;
+let resultMenor = 0;
+
+for(i = 0; i < numbers.length; i += 1) {
+    for(j = 0; j < numbers.length; j += 1) {
+        if(numbers[i] > numbers[j]) {
+            menor = false;
+            break;
+        } else {
+            menor = true;
+        }
+    }
+    if(menor) {
+        resultMenor = numbers[i];
+        break;
+    }
+}
+
+console.log(resultMenor);
