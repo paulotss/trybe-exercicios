@@ -11,3 +11,7 @@ for(let i = 0; i < numbers.length; i += 1) {
     soma += numbers[i];
 }
 console.log(soma);
+
+//Imprime média aritmética
+let media = soma / numbers.length;
+console.log(media);
