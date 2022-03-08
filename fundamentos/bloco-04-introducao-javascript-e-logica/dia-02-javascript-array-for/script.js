@@ -42,3 +42,17 @@ for(i = 0; i < numbers.length; i += 1) {
 }
 
 console.log(maiorResult);
+
+//Retorna quantidade de ímpares do array
+let impares = 0;
+for(i = 0; i < numbers.length; i += 1) {
+    if(numbers[i] % 2 !== 0 ) {
+        impares += 1;
+    }
+}
+
+if(impares > 0) {
+    console.log("O array tem " + impares + " valores ímpares.");
+} else {
+    console.log("Nenhum valor ímpar encontrado");
+}
