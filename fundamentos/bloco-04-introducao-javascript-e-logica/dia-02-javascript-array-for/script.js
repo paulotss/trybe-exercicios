@@ -85,3 +85,8 @@ for(i = 0; i < 25; i += 1) {
 }
 
 console.log(numbers2);
+
+//Imprime valores do array dividio por 2
+for(let number of numbers2) {
+    console.log(number / 2);
+}
