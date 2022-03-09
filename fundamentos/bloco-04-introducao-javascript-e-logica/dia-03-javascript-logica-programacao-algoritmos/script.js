@@ -43,3 +43,24 @@ for (let i = 0; i < array.length; i += 1) {
 
 console.log("Maior palavra é " + array[0]);
 console.log("Menor palavra é " + array[array.length - 1]);
+
+//Retorna maior número primo entre 0 e 50
+let verf = 0;
+let primos = [];
+
+for(let i = 1; i <= 50; i += 1) {
+    for(let j = 1; j <= 50; j += 1) {
+        if(i % j === 0) {
+            verf += 1;
+            if(verf > 2) {
+                break;
+            }
+        }
+    }
+    if(verf === 2) {
+        primos.push(i);
+    }
+    verf = 0;
+}
+console.log(primos);
+console.log("Maior número primo é " + primos[primos.length - 1]);
