@@ -1,5 +1,6 @@
-const a = 5;
-const b = 5;
+function sub(a, b) {
+    let result = a - b;
+    return result;
+}
 
-let result = a - b;
-console.log(result);
+console.log(sub(5, 5));

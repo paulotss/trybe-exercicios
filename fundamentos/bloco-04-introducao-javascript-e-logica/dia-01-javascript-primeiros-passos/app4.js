@@ -1,5 +1,6 @@
-const a = 9;
-const b = 3;
+function div(a, b) {
+    let result = a / b;
+    return result;
+}
 
-let result = a / b;
-console.log(result);
+console.log(div(9, 3));

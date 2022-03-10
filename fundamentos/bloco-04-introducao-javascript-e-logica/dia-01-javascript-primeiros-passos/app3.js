@@ -1,5 +1,6 @@
-const a = 3;
-const b = 4;
+function mult(a, b) {
+    let result = a * b;
+    return result;
+}
 
-let result = a * b;
-console.log(result);
+console.log(mult(3, 4));

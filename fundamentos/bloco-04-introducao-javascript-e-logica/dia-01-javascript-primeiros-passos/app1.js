@@ -1,5 +1,6 @@
-const a = 7;
-const b = 4;
+function soma(a, b) {
+    let result = a + b;
+    return result;
+}
 
-let result = a + b;
-console.log(result);
+console.log(soma(4, 7));

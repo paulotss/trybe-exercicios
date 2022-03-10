@@ -1,17 +1,17 @@
-const ag1 = 50;
-const ag2 = 50;
-const ag3 = 80;
+function ang(ag1, ag2, ag3) {
+    let total = ag1 + ag2 + ag3;
+    let result;
 
-let total = ag1 + ag2 + ag3;
-
-
-
-if (ag1 > 0 && ag2 > 0 && ag3 > 0) {
-    if (total === 180) {
-        console.log(true);
+    if (ag1 > 0 && ag2 > 0 && ag3 > 0) {
+        if (total === 180) {
+            result = true;
+        } else {
+            result = false;
+        }
     } else {
-        console.log(false);
+        result = "Erro";
     }
-} else {
-    console.log("Erro");
+    return result;
 }
+
+console.log(ang(50, 50, 80));

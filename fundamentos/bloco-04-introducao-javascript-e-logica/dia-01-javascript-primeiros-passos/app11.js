@@ -1,19 +1,24 @@
-let nota = 0;
+function avaliacao(nota) {
+    let result;
 
-if(nota <= 100 && nota >= 0) {
-    if (nota >= 90) {
-        console.log("A");
-    } else if (nota >= 80) {
-        console.log("B");
-    } else if (nota >= 70) {
-        console.log("C");
-    } else if (nota >= 60) {
-        console.log("D");
-    } else if (nota >= 50) {
-        console.log("E");
+    if(nota <= 100 && nota >= 0) {
+        if (nota >= 90) {
+            result = "A";
+        } else if (nota >= 80) {
+            result = "B";
+        } else if (nota >= 70) {
+            result = "C";
+        } else if (nota >= 60) {
+            result = "D";
+        } else if (nota >= 50) {
+            result = "E";
+        } else {
+            result = "F";
+        }
     } else {
-        console.log("F");
+        result = "Nota inválida";
     }
-} else {
-    console.log("Nota inválida");
+    return result;
 }
+
+console.log(avaliacao(0));

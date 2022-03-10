@@ -1,5 +1,6 @@
-const a = 8;
-const b = 2;
+function mod(a, b) {
+    let result = a % b;
+    return result;
+}
 
-let result = a % b;
-console.log(result);
+console.log(mod(8, 2));

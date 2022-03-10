@@ -1,9 +1,13 @@
-const n1 = 10;
-const n2 = 4;
-const n3 = 8;
+function impar(n1, n2, n3) {
+    let result;
 
-if (!(n1 % 2 === 0) || !(n2 % 2 === 0) || !(n3 % 2 === 0)) {
-    console.log(true);
-} else {
-    console.log(false);
+    if (!(n1 % 2 === 0) || !(n2 % 2 === 0) || !(n3 % 2 === 0)) {
+        result = true;
+    } else {
+        result = false;
+    }
+    return result;
 }
+
+console.log(impar(10, 4, 8));
+

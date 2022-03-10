@@ -1,31 +1,36 @@
-let peca = "BISPO";
+function xadrez(peca) {
+    peca = peca.toLowerCase();
+    let result;
 
-peca = peca.toLowerCase();
+    switch (peca) {
+        case "bispo" : 
+            result = "Diagonais";
+            break;
+        
+        case "peão" :
+            result = "Frente";
+            break;
+        
+        case "torre" :
+            result = "Vertival/Horizontal";
+            break;
+        
+        case "cavalo" :
+            result = "Forma L";
+        
+        case "rainha" :
+            result = "Vertical/Horizontal/Diagonal";
+            break;
+        
+        case "rei" :
+            result = "Qualquer casa adjacente";
+            break;
+        
+        default :
+            result = "Peça inválida";
+    }
+    return result;
 
-switch (peca) {
-    case "bispo" : 
-        console.log("Diagonais");
-        break;
-    
-    case "peão" :
-        console.log("Frente");
-        break;
-    
-    case "torre" :
-        console.log("Vertival/Horizontal");
-        break;
-    
-    case "cavalo" :
-        console.log("Forma L");
-    
-    case "rainha" :
-        console.log("Vertical/Horizontal/Diagonal");
-        break;
-    
-    case "rei" :
-        console.log("Qualquer casa adjacente");
-        break;
-    
-    default :
-        console.log("Peça inválida");
 }
+
+console.log(xadrez('BISPO'));

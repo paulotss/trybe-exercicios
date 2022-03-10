@@ -1,8 +1,15 @@
-const a = 10;
-const b = 13;
+function maiorNum(a, b) {
+    let result;
+    
+    if(a > b) {
+        result = a;
+    } else if(a < b) {
+        result = b;
+    } else {
+        result = "Iguais";
+    }
 
-if (a > b) {
-    console.log(a);
-} else {
-    console.log(b);
+    return result;
 }
+
+console.log(maiorNum(10, 13));
