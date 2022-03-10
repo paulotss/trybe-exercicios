@@ -104,3 +104,21 @@ function somaArray(num) {
 }
 
 console.log(somaArray(5));
+
+function verificaFimPalavra(word, end) {
+    let wordRev = word.split('').reverse().slice(0,2);
+    let endRev = end.split('').reverse();
+
+    let result = false;
+    for(let key in wordRev) {
+        if(wordRev[key] === endRev[key]) {
+            result = true;
+        } else {
+            result = false;
+            break;
+        }
+    }
+    return result;
+}
+
+console.log(verificaFimPalavra('trybe', 'be'));
