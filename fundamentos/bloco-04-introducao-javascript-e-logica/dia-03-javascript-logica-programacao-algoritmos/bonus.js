@@ -60,3 +60,29 @@ if(p % 2 === 0 || p < 3) {
         linha = '';
     }
 }
+
+//Bônus - Pirâmide vazia com base n
+p = 11;
+alt = 1;
+linha = '';
+if(p % 2 === 0 || p < 3) {
+    console.log("Erro - A base de ser ímpar e maior que 3");
+} else {
+    let meio = ((p-1) / 2) + 1
+    for(let i = 0; i < p; i += 1) {
+        if(alt <= meio) {
+            for(let j = 1; j <= p; j += 1) {
+                if( j === meio - i || j === meio + i || (i === 0 && j === meio) || alt === meio ) {
+                    linha += '*';
+                } else {
+                    linha += ' ';
+                }
+            }
+            alt += 1;
+        } else {
+            break;
+        }
+        console.log(linha);
+        linha = '';
+    }
+}
