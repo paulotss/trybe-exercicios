@@ -15,3 +15,8 @@ console.log(info);
 for(let key in info) {
     console.log(key);
 }
+
+//004
+for(let key in info) {
+    console.log(info[key]);
+}
