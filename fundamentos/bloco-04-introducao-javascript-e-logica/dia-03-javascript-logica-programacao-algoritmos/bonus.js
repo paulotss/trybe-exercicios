@@ -86,3 +86,19 @@ if(p % 2 === 0 || p < 3) {
         linha = '';
     }
 }
+
+//Bônus - Verifica se um número é primo
+let num = 3;
+let aux = 0;
+
+for(let i = 1; i <= num; i += 1) {
+    if(num % i === 0) {
+        aux += 1;
+    }
+}
+
+if (aux <= 2) {
+    console.log(num + " é primo!");
+} else {
+    console.log(num + " não é primo!");
+}
