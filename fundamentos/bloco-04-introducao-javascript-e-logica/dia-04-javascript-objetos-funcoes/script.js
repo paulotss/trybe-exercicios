@@ -10,3 +10,8 @@ console.log('Bem vinda ' + info.personagem);
 //002
 info['recorrente'] = 'Sim';
 console.log(info);
+
+//003
+for(let key in info) {
+    console.log(key);
+}
