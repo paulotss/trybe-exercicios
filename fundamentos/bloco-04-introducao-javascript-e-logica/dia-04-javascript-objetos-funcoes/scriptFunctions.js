@@ -71,3 +71,26 @@ function maiorNome(arr) {
 let nomes = ['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana'];
 
 console.log(maiorNome(nomes));
+
+function maisRepete(arr) {
+    let cont = 0;
+    let hist = 0;
+    let result;
+    for(let val1 of arr) {
+        for(let val2 of arr) {
+            if(val1 === val2) {
+                cont += 1;
+            }
+        }
+        if(cont > hist) {
+            result = val1;
+        }
+        hist = cont;
+        cont = 0;
+    }
+    return result;
+}
+
+arrTeste2 = [2, 3, 2, 5, 8, 2, 3];
+
+console.log(maisRepete(arrTeste2));
