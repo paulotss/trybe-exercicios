@@ -20,7 +20,7 @@ for(let i = 0; i < t; i += 1) {
     linha = '';
 }
 
-//Bônus - Triângulo invertudo com base n
+//Bônus - Triângulo invertido com base n
 let it = 10;
 linha = '';
 for (let i = it; i > 0; i -= 1) {
@@ -33,4 +33,30 @@ for (let i = it; i > 0; i -= 1) {
     }
     console.log(linha);
     linha = '';
+}
+
+//Bônus - Pirâmide com base n
+let p = 11;
+let alt = 1;
+linha = '';
+if(p % 2 === 0 || p < 3) {
+    console.log("Erro - A base de ser ímpar e maior que 3");
+} else {
+    let meio = ((p-1) / 2) + 1
+    for(let i = 0; i < p; i += 1) {
+        if(alt <= meio) {
+            for(let j = 1; j <= p; j += 1) {
+                if( j >= meio - i && j <= meio + i ) {
+                    linha += '*';
+                } else {
+                    linha += ' ';
+                }
+            }
+            alt += 1;
+        } else {
+            break;
+        }
+        console.log(linha);
+        linha = '';
+    }
 }
