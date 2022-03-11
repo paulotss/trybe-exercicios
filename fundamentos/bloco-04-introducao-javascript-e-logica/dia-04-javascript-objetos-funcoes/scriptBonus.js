@@ -116,3 +116,50 @@ console.log("Sua cesta possui:")
 for(let key in items) {
     console.log(items[key] + ": " + key);
 }
+
+let moradores = {
+    blocoUm: [
+      {
+        nome: 'Luiza',
+        sobrenome: 'Guimarães',
+        andar: 10,
+        apartamento: 1005,
+      },
+      {
+        nome: 'William',
+        sobrenome: 'Albuquerque',
+        andar: 5,
+        apartamento: 502,
+      },
+    ],
+    blocoDois: [
+      {
+        nome: 'Murilo',
+        sobrenome: 'Ferraz',
+        andar: 8,
+        apartamento: 804,
+      },
+      {
+        nome: 'Zoey',
+        sobrenome: 'Brooks',
+        andar: 1,
+        apartamento: 101,
+      },
+    ],
+};
+
+console.log("O morador do bloco 2 de nome " + 
+    moradores.blocoDois[1].nome + " " + 
+    moradores.blocoDois[1].sobrenome + " mora no " + 
+    moradores.blocoDois[1].andar + "º andar, apartamento " +
+    moradores.blocoDois[1].apartamento);
+
+console.log("Moradores do bloco 1:");
+for(let val of moradores.blocoUm) {
+    console.log(val.nome, val.sobrenome);
+}
+
+console.log("Moradores do bloco 2:");
+for(let val of moradores.blocoDois) {
+    console.log(val.nome, val.sobrenome);
+}
