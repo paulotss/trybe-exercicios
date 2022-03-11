@@ -68,3 +68,51 @@ function arrayOfNumbers(vector) {
 
 let vector = [[1, 2], [3,4,5,6], [7,8,9,10]];
 console.log(arrayOfNumbers(vector));
+
+function numberOfItems(arr) {
+    const items = {};
+    for(let i = 0; i < arr.length; i += 1) {
+        
+        if(!items[arr[i]]) {
+
+            items[arr[i]] = 1;
+
+            for(let j = 1; j < arr.length; j += 1) {
+                if(arr[i] === arr[j]) {
+                    items[arr[i]] += 1;
+                }
+            }
+
+        }
+        
+    }
+    return items;
+}
+
+const basket = [
+    'Melancia', 'Abacate', 'Melancia', 'Melancia', 'Uva', 'Laranja',
+    'Jaca', 'Pera', 'Melancia', 'Uva', 'Laranja', 'Melancia',
+    'Banana', 'Uva', 'Pera', 'Abacate', 'Laranja', 'Abacate',
+    'Banana', 'Melancia', 'Laranja', 'Laranja', 'Jaca', 'Uva',
+    'Banana', 'Uva', 'Laranja', 'Pera', 'Melancia', 'Uva',
+    'Jaca', 'Banana', 'Pera', 'Abacate', 'Melancia', 'Melancia',
+    'Laranja', 'Pera', 'Banana', 'Jaca', 'Laranja', 'Melancia',
+    'Abacate', 'Abacate', 'Pera', 'Melancia', 'Banana', 'Banana',
+    'Abacate', 'Uva', 'Laranja', 'Banana', 'Abacate', 'Uva',
+    'Uva', 'Abacate', 'Abacate', 'Melancia', 'Uva', 'Jaca',
+    'Uva', 'Banana', 'Abacate', 'Banana', 'Uva', 'Banana',
+    'Laranja', 'Laranja', 'Jaca', 'Jaca', 'Abacate', 'Jaca',
+    'Laranja', 'Melancia', 'Pera', 'Jaca', 'Melancia', 'Uva',
+    'Abacate', 'Jaca', 'Jaca', 'Abacate', 'Uva', 'Laranja',
+    'Pera', 'Melancia', 'Jaca', 'Pera', 'Laranja', 'Jaca',
+    'Pera', 'Melancia', 'Jaca', 'Banana', 'Laranja', 'Jaca',
+    'Banana', 'Pera', 'Abacate', 'Uva',
+];
+
+let items = numberOfItems(basket)
+
+console.log("Sua cesta possui:")
+
+for(let key in items) {
+    console.log(items[key] + ": " + key);
+}
