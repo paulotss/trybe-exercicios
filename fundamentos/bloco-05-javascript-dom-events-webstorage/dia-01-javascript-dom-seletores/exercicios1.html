@@ -63,6 +63,14 @@
 
         const section = document.getElementsByClassName('center-content');
         section[0].style.backgroundColor = 'white';
+
+        const title1 = document.getElementsByClassName('title');
+        title1[0].innerText = "Exercício 5.1 - JavaScript";
+
+        for(let val of pars) {
+            val.innerText = val.innerText.toUpperCase();
+            console.log(val.innerText);
+        }
     </script>
   </body>
 </html>
