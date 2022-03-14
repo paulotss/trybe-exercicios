@@ -21,5 +21,5 @@ for(let val of noEmergencyH3) {
     val.style.backgroundColor = 'black';
 }
 
-let footer = document.querySelector('#footer-container div');
+let footer = document.getElementById('footer-container');
 footer.style.backgroundColor = '#074242';
