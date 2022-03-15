@@ -48,7 +48,9 @@
 
         let neto = document.createElement('section');
         neto.innerHTML = "Sou o netinho!";
-        primeiroFilhoDoFilho.appendChild(neto);
+        neto = primeiroFilhoDoFilho.appendChild(neto);
+
+        console.log(neto.parentElement.parentElement.nextElementSibling);
     </script>
 </body>
 </html>
