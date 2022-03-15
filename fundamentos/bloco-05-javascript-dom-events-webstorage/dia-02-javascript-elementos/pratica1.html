@@ -51,6 +51,16 @@
         neto = primeiroFilhoDoFilho.appendChild(neto);
 
         console.log(neto.parentElement.parentElement.nextElementSibling);
+
+        paiElemento.removeChild(paiElemento.firstElementChild);
+        paiElemento.removeChild(paiElemento.firstElementChild.nextSibling);
+        paiElemento.removeChild(paiElemento.lastElementChild);
+        paiElemento.removeChild(paiElemento.lastElementChild);
+        paiElemento.removeChild(paiElemento.lastElementChild);
+        elemento.removeChild(elemento.lastElementChild);
+        elemento.removeChild(elemento.lastElementChild);
+        primeiroFilhoDoFilho.removeChild(primeiroFilhoDoFilho.lastElementChild);
+        primeiroFilhoDoFilho.removeChild(primeiroFilhoDoFilho.lastChild);
     </script>
 </body>
 </html>
