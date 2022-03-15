@@ -86,6 +86,18 @@
       smallImage.src = "https://picsum.photos/200";
       smallImage.className = "small-image";
       leftContent.appendChild(smallImage);
+
+      let list = document.createElement('ul');
+      let listItem;
+      let numbers = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+
+      for (let val of numbers) {
+        listItem = document.createElement('li');
+        listItem.innerText = val;
+        list.appendChild(listItem);
+      }
+
+      rightContent.appendChild(list);
     </script>
   </body>
 </html>
