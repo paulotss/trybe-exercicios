@@ -51,14 +51,14 @@ function createDayDez(arr) {
 
 createDayDez(dezDaysList);
 
-function createButton(src) {
+function createButton(src, id) {
   let buttonHol = document.createElement("button");
-  buttonHol.setAttribute('id', 'btn-holiday');
+  buttonHol.setAttribute('id', id);
   buttonHol.innerText = src;
   return buttonHol;
 }
 
-document.querySelector(".buttons-container").appendChild(createButton("Feriados"));
+document.querySelector(".buttons-container").appendChild(createButton("Feriados", "btn-holiday"));
 
 function holidays() {
   let hol = document.getElementsByClassName('holiday');
@@ -72,3 +72,5 @@ function holidays() {
 }
 
 document.getElementById('btn-holiday').addEventListener('click',holidays);
+
+document.querySelector(".buttons-container").appendChild(createButton("Sexta-Feira", "btn-friday"));
