@@ -74,3 +74,16 @@ function holidays() {
 document.getElementById('btn-holiday').addEventListener('click',holidays);
 
 document.querySelector(".buttons-container").appendChild(createButton("Sexta-Feira", "btn-friday"));
+
+function fridays() {
+  let fri = document.getElementsByClassName('friday');
+  for(let val of fri) {
+    if(val.style.fontWeight === 'bold') {
+      val.style.fontWeight = 'normal';
+    } else {
+      val.style.fontWeight = 'bold';
+    }
+  }
+}
+
+document.getElementById('btn-friday').addEventListener('click', fridays);
