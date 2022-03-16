@@ -50,3 +50,12 @@ function createDayDez(arr) {
 }
 
 createDayDez(dezDaysList);
+
+function createButton(src) {
+  let buttonHol = document.createElement("button");
+  buttonHol.setAttribute('id', 'btn-holiday');
+  buttonHol.innerText = src;
+  return buttonHol;
+}
+
+document.querySelector(".buttons-container").appendChild(createButton("Feriados"));
