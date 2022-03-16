@@ -43,10 +43,17 @@ firstLi.addEventListener('click', tech);
 secondLi.addEventListener('click', tech);
 thirdLi.addEventListener('click',tech);
 
+input.addEventListener('keyup',techText);
+
 function tech(e) {
     let lis = document.querySelector(".container").children;
     for(let val of lis) {
         val.removeAttribute('class');
     }
-    e.target.className += "tech";
+    e.target.className += 'tech';
+}
+
+function techText() {
+    let tech = document.querySelector('.tech');
+    tech.innerText = input.value;
 }
