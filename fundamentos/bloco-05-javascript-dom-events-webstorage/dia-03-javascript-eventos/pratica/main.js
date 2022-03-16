@@ -46,6 +46,7 @@ thirdLi.addEventListener('click',tech);
 input.addEventListener('keyup', techText);
 
 myWebpage.addEventListener('dblclick', redirectPage);
+myWebpage.addEventListener('mouseover', changeColor);
 
 function tech(e) {
     let lis = document.querySelector(".container").children;
@@ -62,4 +63,8 @@ function techText() {
 
 function redirectPage() {
     window.location.href = "https://paulotss.github.io/";
+}
+
+function changeColor(e) {
+    e.target.style.color = "red";
 }
