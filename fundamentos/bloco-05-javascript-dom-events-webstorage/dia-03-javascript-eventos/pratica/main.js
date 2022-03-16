@@ -33,7 +33,7 @@ function resetText(event) {
   // que retorna o objeto que disparou o evento.
 }
 
-firstLi.addEventListener('dblclick', resetText);
+firstLi.addEventListener('click', resetText);
 
 // Não precisa passar o parâmetro dentro da callback resetText. O próprio
 // navegador fará esse trabalho por você, não é legal? Desse jeito, o
@@ -43,7 +43,9 @@ firstLi.addEventListener('click', tech);
 secondLi.addEventListener('click', tech);
 thirdLi.addEventListener('click',tech);
 
-input.addEventListener('keyup',techText);
+input.addEventListener('keyup', techText);
+
+myWebpage.addEventListener('dblclick', redirectPage);
 
 function tech(e) {
     let lis = document.querySelector(".container").children;
@@ -56,4 +58,8 @@ function tech(e) {
 function techText() {
     let tech = document.querySelector('.tech');
     tech.innerText = input.value;
+}
+
+function redirectPage() {
+    window.location.href = "https://paulotss.github.io/";
 }
