@@ -8,6 +8,7 @@ const myWebpage = document.getElementById('my-spotrybefy');
 // 1. Copie esse arquivo e edite apenas ele;
 // 1.1. Antes de começar os exercícios, use o LiveServer para dar uma olhada em como está a página no navegador.
 // 1.2. Note que uma das caixas está um pouco acima das outras. Por que isso ocorre?
+// Resposta: por causa da propriedade transform do css: -20px translateY
 
 // 2. Crie uma função que adicione a classe 'tech' ao elemento `li` quando for clicado.
 // 2.1. Deve existir apenas um elemento com a classe 'tech'. Como você faz isso?
@@ -37,3 +38,15 @@ firstLi.addEventListener('dblclick', resetText);
 // Não precisa passar o parâmetro dentro da callback resetText. O próprio
 // navegador fará esse trabalho por você, não é legal? Desse jeito, o
 // event.target na nossa função retornará o objeto 'firstLi'.
+
+firstLi.addEventListener('click', tech);
+secondLi.addEventListener('click', tech);
+thirdLi.addEventListener('click',tech);
+
+function tech(e) {
+    let lis = document.querySelector(".container").children;
+    for(let val of lis) {
+        val.removeAttribute('class');
+    }
+    e.target.className += "tech";
+}
