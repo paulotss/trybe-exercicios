@@ -123,7 +123,14 @@ function addLegend(color) {
   let task = document.createElement('div');
   task.classList.add('task');
   task.style.backgroundColor = color;
+  
+  //Exercicio 9
+  task.addEventListener('click', function(e) {
+    e.target.classList.toggle('selected');
+  });
+
   document.querySelector('.my-tasks').appendChild(task);
 }
 
 addLegend('green');
+
