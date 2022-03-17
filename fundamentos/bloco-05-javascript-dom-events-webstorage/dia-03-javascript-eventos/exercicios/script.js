@@ -25,6 +25,7 @@ function createDayDez(arr) {
     li = document.createElement('li');
     li.classList.add('day');
     li.innerText = val;
+    li.addEventListener('click', addTaskColor);
     switch(val) {
       case 24:
         li.classList.add('holiday');
@@ -134,3 +135,12 @@ function addLegend(color) {
 
 addLegend('green');
 
+//Exercicio 10
+function addTaskColor(e) {
+  let selected = document.querySelector('.selected');
+  if(selected !== null) {
+    let color = selected.style.backgroundColor;
+    let colorLi = e.target.style.color;
+    e.target.style.color = color === colorLi ? 'rgb(119,119,119)' : color;
+  }
+}
