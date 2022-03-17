@@ -113,7 +113,7 @@ function zoomOut(e) {
 //Exercício 7
 function addTask(src) {
   let task = document.createElement('span');
-  task.innerText = src;
+  task.innerHTML = '<br>' + src;
   document.querySelector('.my-tasks').appendChild(task);
 }
 
@@ -144,3 +144,21 @@ function addTaskColor(e) {
     e.target.style.color = color === colorLi ? 'rgb(119,119,119)' : color;
   }
 }
+
+//Bônus
+document.getElementById('btn-add').addEventListener('click', inputTask);
+
+function inputTask() {
+    src = document.getElementById('task-input').value;
+    if(src !== '') {
+      addTask(src);
+    } else {
+      alert('Escreva uma tarefa!')
+    }
+}
+
+document.getElementById('task-input').addEventListener('keyup', function(e) {
+  if(e.key == 'Enter') {
+    inputTask();
+  }
+})
