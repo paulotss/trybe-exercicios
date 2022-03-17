@@ -116,3 +116,14 @@ function addTask(src) {
   document.querySelector('.my-tasks').appendChild(task);
 }
 
+addTask('Tarefa');
+
+//Exercício 8
+function addLegend(color) {
+  let task = document.createElement('div');
+  task.classList.add('task');
+  task.style.backgroundColor = color;
+  document.querySelector('.my-tasks').appendChild(task);
+}
+
+addLegend('green');
