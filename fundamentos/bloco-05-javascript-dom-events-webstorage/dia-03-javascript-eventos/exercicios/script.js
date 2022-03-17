@@ -87,3 +87,17 @@ function fridays() {
 }
 
 document.getElementById('btn-friday').addEventListener('click', fridays);
+
+let days = document.getElementsByClassName('day');
+for(let val of days) {
+  val.addEventListener('mouseover', zoomIn);
+  val.addEventListener('mouseout', zoomOut);
+}
+
+function zoomIn(e) {
+  e.target.style.fontSize = "24px";
+}
+
+function zoomOut(e) {
+  e.target.style.fontSize = "20px";
+}
