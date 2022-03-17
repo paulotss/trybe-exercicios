@@ -15,6 +15,7 @@ createDaysOfTheWeek();
 
 // Escreva seu código abaixo.
 
+//Exercício 1
 const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
 const ulDays = document.getElementById('days');
 
@@ -51,6 +52,7 @@ function createDayDez(arr) {
 
 createDayDez(dezDaysList);
 
+//Exercício 2
 function createButton(src, id) {
   let buttonHol = document.createElement("button");
   buttonHol.setAttribute('id', id);
@@ -60,6 +62,7 @@ function createButton(src, id) {
 
 document.querySelector(".buttons-container").appendChild(createButton("Feriados", "btn-holiday"));
 
+//Exercício 3
 function holidays() {
   let hol = document.getElementsByClassName('holiday');
   for(let val of hol) {
@@ -73,8 +76,10 @@ function holidays() {
 
 document.getElementById('btn-holiday').addEventListener('click',holidays);
 
+//Exercício 4
 document.querySelector(".buttons-container").appendChild(createButton("Sexta-Feira", "btn-friday"));
 
+//Exercício 5
 function fridays() {
   let fri = document.getElementsByClassName('friday');
   for(let val of fri) {
@@ -88,6 +93,8 @@ function fridays() {
 
 document.getElementById('btn-friday').addEventListener('click', fridays);
 
+
+//Exercício 6
 let days = document.getElementsByClassName('day');
 for(let val of days) {
   val.addEventListener('mouseover', zoomIn);
@@ -101,3 +108,11 @@ function zoomIn(e) {
 function zoomOut(e) {
   e.target.style.fontSize = "20px";
 }
+
+//Exercício 7
+function addTask(src) {
+  let task = document.createElement('span');
+  task.innerText = src;
+  document.querySelector('.my-tasks').appendChild(task);
+}
+
