@@ -3,50 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="bootstrap-5.1.3-dist/css/bootstrap.min.css">
+  <script src="bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
   <title>Exercício Forms</title>
 </head>
 <body>
-  <header>
+  <header class="container">
     <h1>Exercício Forms</h1>
   </header>
-  <main>
+  <main class="container">
     <section>
       <form action="" method="GET">
         <fieldset>
           <legend>Formulário</legend>
+          <div class="mb-3">
+            <label for="name-id">Nome:</label>
+            <input class="form-control" type="text" name="name" id="name-id" maxlength="45" required>
+          </div>
+          <div class="mb-3">
+            <label for="email-id">Email:</label>
+            <input class="form-control" type="email" name="email" id="email-id" maxlength="45" required>
+          </div>
+          <div class="mb-3">
+            <div class="form-check">
+              <label class="form-check-label" for="destino-sp">São Paulo</label>
+              <input class="form-check-input" type="radio" name="destino" id="destino-sp" value="sp">
+            </div>
 
-          <label for="name-id">Nome:</label>
-          <input type="text" name="name" id="name-id" maxlength="45" required>
+            <div class="form-check">
+              <label class="form-check-label" for="destino-ce">Ceará</label>
+              <input class="form-check-input" class="form-control" type="radio" name="destino" id="destino-ce" value="ce">
+            </div>
 
-          <label for="email-id">Email:</label>
-          <input type="email" name="email" id="email-id" maxlength="45" required>
+            <div class="form-check">
+              <label class="form-check-label" for="destino-bsb">Brasília</label>
+              <input class="form-check-input" type="radio" name="destino" id="destino-bsb" value="bsb">
+            </div>
 
-          <label for="destino-sp">São Paulo</label>
-          <input type="radio" name="destino" id="destino-sp" value="sp">
+            <div class="form-check">
+              <label class="form-check-label" for="destino-mg">Minas Gerais</label>
+              <input class="form-check-input" type="radio" name="destino" id="destino-mg" value="mg">
+            </div>
+          </div>
 
-          <label for="destino-ce">Ceará</label>
-          <input type="radio" name="destino" id="destino-ce" value="ce">
+          <div class="mb-3">
+            <label for="description-id">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</label>
+            <textarea class="form-control" name="description" id="description-id" cols="30" rows="5" maxlength="145" required></textarea>
+          </div>
 
-          <label for="destino-bsb">Brasília</label>
-          <input type="radio" name="destino" id="destino-bsb" value="bsb">
+          <div class="mb-3">
+            <label for="date-id">Qual a melhor data para realizar sua viagem?</label>
+            <input class="form-control" type="date" name="date" id="date-id" required>
+          </div>
 
-          <label for="destino-mg">Minas Gerais</label>
-          <input type="radio" name="destino" id="destino-mg" value="mg">
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" value="true" name="newsletter" id="newsletter-id">
+            <label class="form-check-label" for="newsletter-id">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</label>
+          </div>
 
-          <label for="description-id">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</label>
-          <textarea name="description" id="description-id" cols="30" rows="5" maxlength="145" required></textarea>
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" value="true" name="photo-agree" id="photo-agree-id">
+            <label class="form-check-label" for="photo-agree-id">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.</label>
+          </div>
 
-          <label for="date-id">Qual a melhor data para realizar sua viagem?</label>
-          <input type="date" name="date" id="date-id" required>
-
-          <label for="newsletter-id">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</label>
-          <input type="checkbox" value="true" name="newsletter" id="newsletter-id">
-
-          <label for="photo-agree-id">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.</label>
-          <input type="checkbox" value="true" name="photo-agree" id="photo-agree-id">
-
-          <button type="submit" id="send">Enviar</button>
-          <button type="reset">Reset</button>
+          <button class="btn btn-success" type="submit" id="send">Enviar</button>
+          <button class="btn btn-secondary" type="reset">Reset</button>
         </fieldset>
       </form>
     </section>
