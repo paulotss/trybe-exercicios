@@ -1,12 +1,16 @@
-document.getElementById('date-id').DatePickerX.init();
+const validate = new JustValidate('#trybe');
 
-document.getElementById('send').addEventListener('click', function(e) {
-  e.preventDefault();
-  let check = document.getElementById('photo-agree-id').checked;
-  console.log(check);
-  if(!check) {
-    alert('Dados inválidos!');
-  } else {
-    alert('Dados enviados com sucesso! Obrigado por participar do concurso TrybeTrip.');
-  }
-});
+validate
+  .addField('#name-id',[
+    {
+      rule: 'minLength',
+      value: 5,
+      errorMessage: 'teste'
+    },
+    {
+      rule: 'maxLength',
+      value: 45
+    }
+  ]);
+
+document.getElementById('date-id').DatePickerX.init();
