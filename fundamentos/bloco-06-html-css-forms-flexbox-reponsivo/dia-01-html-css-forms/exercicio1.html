@@ -16,10 +16,10 @@
           <legend>Formulário</legend>
 
           <label for="name-id">Nome:</label>
-          <input type="text" name="name" id="name-id" >
+          <input type="text" name="name" id="name-id" maxlength="45" required>
 
           <label for="email-id">Email:</label>
-          <input type="email" name="email" id="email-id" >
+          <input type="email" name="email" id="email-id" maxlength="45" required>
 
           <label for="destino-sp">São Paulo</label>
           <input type="radio" name="destino" id="destino-sp" value="sp">
@@ -34,10 +34,10 @@
           <input type="radio" name="destino" id="destino-mg" value="mg">
 
           <label for="description-id">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</label>
-          <textarea name="description" id="description-id" cols="30" rows="5"></textarea>
+          <textarea name="description" id="description-id" cols="30" rows="5" maxlength="145" required></textarea>
 
           <label for="date-id">Qual a melhor data para realizar sua viagem?</label>
-          <input type="date" name="date" id="date-id" >
+          <input type="date" name="date" id="date-id" required>
 
           <label for="newsletter-id">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</label>
           <input type="checkbox" value="true" name="newsletter" id="newsletter-id">
