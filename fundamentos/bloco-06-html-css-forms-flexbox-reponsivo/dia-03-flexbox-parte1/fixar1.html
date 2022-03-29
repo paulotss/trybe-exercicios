@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flexbox - Flex Flow</title>
     <style>
+      body {
+        min-height: 100%;
+      }
+
+
       .box {
         color: #9069EF;
         background-color: rgb(243, 243, 243);
         border: 2px solid #232525;
         font-size: 50px;
-        height: 60px;
-        margin: 10px 5px;
         text-align: center;
         width: 30%;
       }
@@ -20,9 +23,10 @@
         background-color: #0fa36b;
         display: flex;
         /* ADICIONE AQUI SEUS TESTES */
-        flex-direction: row-reverse;
-        flex-wrap: wrap;
-        flex-flow: row wrap;
+        flex-flow: row;
+        /*align-content: space-evenly;*/
+        align-items: center;
+        min-height: 500px;
       }
     </style>
 
