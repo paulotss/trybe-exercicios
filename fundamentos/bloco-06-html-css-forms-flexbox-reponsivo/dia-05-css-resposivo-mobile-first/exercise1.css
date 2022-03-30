@@ -11,7 +11,11 @@
 }
 
 body {
+  margin: 20px;
+}
 
+p {
+  font-size: 34px;
 }
 
 article {
@@ -19,7 +23,7 @@ article {
 }
 
 h1 {
-
+  font-size: 24px;
 }
 
 h2 {
@@ -39,9 +43,37 @@ section {
 }
 
 figure {
-    margin: 0;
+    margin-bottom: 20px;
 }
 
 figcaption {
   font-size: .8em;
+}
+
+@media screen and (min-width: 588px) {
+  body {
+    background-color: aquamarine;
+    margin: 8px;
+  }
+
+  p {
+    font-size: 24px;
+  }
+
+  section {
+    display: flex;
+    flex-flow: row wrap;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    background-color: cornflowerblue;
+    margin: 0;
+    max-width: 2100px;
+  }
+
+  p {
+    font-size: 18px;
+  }
 }
