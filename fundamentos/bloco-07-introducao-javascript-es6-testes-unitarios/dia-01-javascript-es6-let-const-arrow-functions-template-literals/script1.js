@@ -29,10 +29,8 @@ for (let i = 0; i < oddsAndEvens.length; i += 1) {
 
 console.log(`Os números ${oddsAndEvens.join(', ')} se encontram ordenados de forma crescente.`); // será necessário alterar essa linha 😉
 
-const count = 0;
+const addCount = count => count += 1;
 
-function addCount() {
-  count += 1;
-}
-
-document.getElementById('count').addEventListener('click', addCount);
+document.getElementById('count').addEventListener('click', function() {
+  document.getElementById('result').innerText = addCount(Number(document.getElementById('result').innerText));
+});
