@@ -24,4 +24,4 @@ for (let i = 0; i < oddsAndEvens.length; i += 1) {
   }
 }
 
-console.log(oddsAndEvens); // será necessário alterar essa linha 😉
+console.log(`Os números ${oddsAndEvens.join(', ')} se encontram ordenados de forma crescente.`); // será necessário alterar essa linha 😉
