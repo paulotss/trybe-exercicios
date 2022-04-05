@@ -28,3 +28,11 @@ for (let i = 0; i < oddsAndEvens.length; i += 1) {
 }
 
 console.log(`Os números ${oddsAndEvens.join(', ')} se encontram ordenados de forma crescente.`); // será necessário alterar essa linha 😉
+
+const count = 0;
+
+function addCount() {
+  count += 1;
+}
+
+document.getElementById('count').addEventListener('click', addCount);
