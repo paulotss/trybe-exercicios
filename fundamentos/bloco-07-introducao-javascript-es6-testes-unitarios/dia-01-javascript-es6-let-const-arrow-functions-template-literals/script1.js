@@ -12,6 +12,9 @@ testingScope = escopo => {
 console.log(testingScope(true));
 
 const oddsAndEvens = [13, 3, 4, 10, 7, 2];
+
+console.log(`Os números ${oddsAndEvens.sort((a, b) => a - b)} se encontram ordenados de forma crescente.`); // será necessário alterar essa linha 😉
+
 let aux = 0;
 
 for (let i = 0; i < oddsAndEvens.length; i += 1) {
