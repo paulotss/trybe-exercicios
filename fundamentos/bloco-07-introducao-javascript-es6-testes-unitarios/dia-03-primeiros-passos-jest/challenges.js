@@ -132,5 +132,3 @@ module.exports = {
   splitSentence,
   techList,
 };
-
-module.exports = {encode, decode};
