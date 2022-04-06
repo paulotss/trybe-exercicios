@@ -1,4 +1,4 @@
-const {sum, myRemove} = require('./sum');
+const {sum, myRemove, myFizzBuzz} = require('./sum');
 
 describe('Requisito 1', () => {
   it('Teste se o retorno de sum(4, 5) é 9', () => {
@@ -27,5 +27,23 @@ describe('Requisito 2', () => {
   it('Verifique se a chamada myRemove([1, 2, 3, 4], 5) retorna o array esperado', () => {
     const arr = [1, 2, 3, 4];
     expect(myRemove(arr, 5)).toEqual(arr);
-  })
-})
+  });
+});
+
+describe('Requisito 3', () => {
+  it('Número divisível por 3 e 5', () => {
+    expect(myFizzBuzz(15)).toBe('fizzbuzz');
+  });
+  it('Número divisível por 3', () => {
+    expect(myFizzBuzz(3)).toBe('fizz');
+  });
+  it('Número divisível por 5', () => {
+    expect(myFizzBuzz(5)).toBe('buzz');
+  });
+  it('Número não é divisível por 3 e 5', () => {
+    expect(myFizzBuzz(7)).toBe(7);
+  });
+  it('Não é um número', () => {
+    expect(myFizzBuzz('5')).toBe(false);
+  });
+});
