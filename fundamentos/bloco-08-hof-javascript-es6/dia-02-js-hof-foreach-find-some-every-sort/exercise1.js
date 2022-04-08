@@ -83,3 +83,9 @@ function smallerName() {
 }
 
 console.log(smallerName());
+
+function getNamedBook() {
+  return books.find((val) => val.name.length === 26);
+}
+
+console.log(getNamedBook());
