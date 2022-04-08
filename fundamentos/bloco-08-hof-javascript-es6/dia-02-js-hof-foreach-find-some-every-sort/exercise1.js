@@ -104,3 +104,9 @@ function everyoneWasBornOnSecXX() {
 }
 
 console.log(everyoneWasBornOnSecXX());
+
+function someBookWasReleaseOnThe80s() {
+  return books.some((val) => val.releaseYear >= 1980 && val.releaseYear < 1990);
+}
+
+console.log(someBookWasReleaseOnThe80s());
