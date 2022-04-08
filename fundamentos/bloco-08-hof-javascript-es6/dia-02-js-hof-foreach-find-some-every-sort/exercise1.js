@@ -110,3 +110,16 @@ function someBookWasReleaseOnThe80s() {
 }
 
 console.log(someBookWasReleaseOnThe80s());
+
+function authorUnique() {
+  let result = false;
+  for (let i = 0; i < books.length; i += 1) {
+    result = books.some((val, index) => {
+      return val.author.birthYear === books[i].author.birthYear && i !== index;
+    });
+    if (result) { break; }
+  }
+  return result;
+}
+
+console.log(authorUnique());
