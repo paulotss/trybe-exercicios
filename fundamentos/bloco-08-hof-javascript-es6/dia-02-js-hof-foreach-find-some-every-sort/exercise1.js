@@ -69,3 +69,17 @@ function authorBornIn1947() {
 }
 
 console.log(authorBornIn1947());
+
+function smallerName() {
+  let nameBook;
+  let menor = books[0].name.length;
+  books.forEach((val) => {
+    if (val.name.length < menor) {
+      menor = val.name.length;
+      nameBook = val.name;
+    }
+  });
+  return nameBook;
+}
+
+console.log(smallerName());
