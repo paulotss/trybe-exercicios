@@ -5,7 +5,7 @@ const getMarsTemperature = () => {
   return Math.floor(Math.random() * maxTemperature);
 };
 
-sendMarsTemperature = (callback) => {
+const sendMarsTemperature = (callback) => {
   setTimeout(() => console.log(getMarsTemperature()), messageDelay());
 } 
 
