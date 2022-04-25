@@ -31,7 +31,7 @@ function getPokemonDetails(filter, callback) {
   }, 2000);
 }
 
-  getPokemonDetails((pokemon) => pokemon.name === 'poi', (par, message) => {
+  getPokemonDetails((pokemon) => pokemon.name === 'Squirtle', (par, message) => {
     if(par === null) {
       console.log(message);
     } else {
