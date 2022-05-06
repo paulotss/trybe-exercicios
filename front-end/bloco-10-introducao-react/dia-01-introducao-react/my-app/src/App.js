@@ -6,7 +6,7 @@ function App() {
 
   const task = (value) => {
     return (
-    <li>{value}</li>
+    <li key={value}>{value}</li>
     )
   }
 
