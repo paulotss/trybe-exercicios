@@ -9,6 +9,7 @@ class Form extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.state = {
       nome: '',
+      email: '',
     }
   }
 
@@ -26,6 +27,7 @@ class Form extends React.Component {
           <PersonalData 
             handleChange={this.handleChange}
             nome={this.state.nome}
+            email={this.state.email}
           />
         </form>
       </section>
