@@ -76,6 +76,12 @@ class PersonalData extends React.Component {
               <option>Tocantins (TO)</option>
             </select>
           </div>
+          <div>
+            <label htmlFor="casa">Casa</label>
+            <input type="radio" id="casa" name="tipo" /><br />
+            <label htmlFor="apartamento">Apartamento</label>
+            <input type="radio" id="apartamento" name="tipo" /><br />
+          </div>
         </fieldset>
       </>
     );
