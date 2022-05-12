@@ -13,6 +13,7 @@ class Form extends React.Component {
       cpf: '',
       endereco: '',
       cidade: '',
+      estado: '',
     }
   }
 
@@ -34,6 +35,7 @@ class Form extends React.Component {
             cpf={this.state.cpf}
             endereco={this.state.endereco}
             cidade={this.state.cidade}
+            estado={this.state.estado}
           />
         </form>
       </section>
