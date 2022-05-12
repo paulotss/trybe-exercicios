@@ -10,6 +10,8 @@ class Form extends React.Component {
     this.state = {
       nome: '',
       email: '',
+      cpf: '',
+      endereco: '',
     }
   }
 
@@ -28,6 +30,8 @@ class Form extends React.Component {
             handleChange={this.handleChange}
             nome={this.state.nome}
             email={this.state.email}
+            cpf={this.state.cpf}
+            endereco={this.state.endereco}
           />
         </form>
       </section>
