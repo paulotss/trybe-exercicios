@@ -1,8 +1,19 @@
 import React from 'react';
 
 class PersonalData extends React.Component {
+
+  constructor() {
+    super();
+    this.handleBlurCidade = this.handleBlurCidade.bind(this);
+  }
+
+  handleBlurCidade({ target }) {
+    let { value } = target;
+    target.value = Number(value.charAt(0)) ? '' : value;
+  }
+
   render() {
-    let { nome, email, cpf, endereco, handleChange } = this.props;
+    let { nome, email, cpf, endereco, cidade, handleChange } = this.props;
     nome = nome.toUpperCase();
 
     //Verifica se o último carater é A-z
@@ -14,20 +25,24 @@ class PersonalData extends React.Component {
         <h2>Dados Pessoais</h2>
         <fieldset>
           <div>
-            <label htmlFor="nome">Nome: </label>
+            <label htmlFor="nome">Nome: </label><br />
             <input type="text" id="nome" name="nome" maxLength={40} value={nome} onChange={handleChange} required />
           </div>
           <div>
-            <label htmlFor="email">Email: </label>
+            <label htmlFor="email">Email: </label><br />
             <input type="email" id="email" name="email" maxLength={50} value={email} onChange={handleChange} required />
           </div>
           <div>
-            <label htmlFor="cpf">CPF: </label>
+            <label htmlFor="cpf">CPF: </label><br />
             <input type="text" id="cpf" name="cpf" maxLength={11} value={cpf} onChange={handleChange} required />
           </div>
           <div>
-            <label htmlFor="endereco">Endereço: </label>
-            <input type="text" id="endereco" name="endereco" maxLength={200} value={endereco} onChange={handleChange} />
+            <label htmlFor="endereco">Endereço: </label><br />
+            <input type="text" id="endereco" name="endereco" maxLength={200} value={endereco} onChange={handleChange} required />
+          </div>
+          <div>
+            <label htmlFor="cidade">Cidade: </label><br />
+            <input type="text" id="cidade" name="cidade" maxLength={28} value={cidade} onChange={handleChange} onBlur={this.handleBlurCidade} required />
           </div>
         </fieldset>
       </>
