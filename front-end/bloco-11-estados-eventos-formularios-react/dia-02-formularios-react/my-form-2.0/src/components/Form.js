@@ -16,6 +16,8 @@ class Form extends React.Component {
       cidade: '',
       estado: '',
       curriculo: '',
+      cargo: '',
+      dcargo: '',
     }
   }
 
@@ -42,6 +44,8 @@ class Form extends React.Component {
           <LastWorks
             handleChange={this.handleChange}
             curriculo={this.state.curriculo}
+            cargo={this.state.cargo}
+            dcargo={this.state.dcargo}
           />
         </form>
       </section>
