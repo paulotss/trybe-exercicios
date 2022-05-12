@@ -1,5 +1,6 @@
 import { getValue } from '@testing-library/user-event/dist/utils';
 import React from 'react';
+import LastWorks from './LastWork';
 import PersonalData from './PersonalData';
 
 class Form extends React.Component {
@@ -14,6 +15,7 @@ class Form extends React.Component {
       endereco: '',
       cidade: '',
       estado: '',
+      curriculo: '',
     }
   }
 
@@ -36,6 +38,10 @@ class Form extends React.Component {
             endereco={this.state.endereco}
             cidade={this.state.cidade}
             estado={this.state.estado}
+          />
+          <LastWorks
+            handleChange={this.handleChange}
+            curriculo={this.state.curriculo}
           />
         </form>
       </section>
