@@ -22,6 +22,9 @@
       <p>Cidade: <span id="cidade-2">São Paulo</span></p>
     </div>
     <script>
+      const ALTER_NAME1 = 'ALTER_NAME1';
+      const ALTER_NAME2 = 'ALTER_NAME2';
+
       const ESTADO_INICIAL_1 = {
         nome: 'Rodrigo',
         sobrenome: 'Santos da Silva',
@@ -36,8 +39,30 @@
         cidade: 'São Paulo',
       };
 
+      const actionAlterName1 = (nome, sobremone) => {
+        return {
+          type: ALTER_NAME1,
+          nome: nome,
+          sobrenome: sobremone
+        }
+      }
+
+      const actionAlterName2 = (nome, sobremone) => {
+        return {
+          type: ALTER_NAME2,
+          nome: nome,
+          sobrenome: sobremone
+        }
+      }
+
       const meuPrimeiroReducer = (state = ESTADO_INICIAL_1, action) => {
         switch (action.type) {
+          case ALTER_NAME1:
+            return {
+              ...state,
+              nome: action.nome,
+              sobrenome: action.sobrenome
+            }
           default:
             return state;
         }
@@ -45,6 +70,12 @@
 
       const meuSegundoReducer = (state = ESTADO_INICIAL_2, action) => {
         switch (action.type) {
+          case ALTER_NAME2:
+            return {
+              ...state,
+              nome: action.nome,
+              sobrenome: action.sobrenome
+            }
           default:
             return state;
         }
@@ -56,6 +87,17 @@
       });
 
       const store = Redux.createStore(reducers);
+
+      window.onload = () => {
+        setTimeout(() => {
+          store.dispatch(actionAlterName1('Paulo de Tarso', 'Silva'));
+          store.dispatch(actionAlterName2('Raquel', 'Noronha'));
+          document.getElementById('nome-1').innerText = store.getState().meuPrimeiroReducer.nome;
+          document.getElementById('sobrenome-1').innerText = store.getState().meuPrimeiroReducer.sobrenome;
+          document.getElementById('nome-2').innerText = store.getState().meuSegundoReducer.nome;
+          document.getElementById('sobrenome-2').innerText = store.getState().meuSegundoReducer.sobrenome;
+        }, 3000)
+      }
     </script>
   </body>
 </html>
