@@ -59,6 +59,16 @@
       }
 
       const store = Redux.createStore(reducer);
+
+      const nextButton = document.getElementById('next');
+      const prevButton = document.getElementById('previous');
+
+      nextButton.addEventListener('click', () => {
+        store.dispatch({ type: NEXT_COLOR });
+      });
+      prevButton.addEventListener('click', () => {
+        store.dispatch({ type: PREVIOUS_COLOR });
+      })
     </script>
   </body>
 </html>
