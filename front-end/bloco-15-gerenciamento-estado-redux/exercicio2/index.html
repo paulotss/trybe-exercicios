@@ -49,6 +49,13 @@
             return state;
         }
       };
+
+      const reducers = Redux.combineReducers({
+        meuPrimeiroReducer,
+        meuSegundoReducer,
+      });
+
+      const store = Redux.createStore(reducers);
     </script>
   </body>
 </html>
