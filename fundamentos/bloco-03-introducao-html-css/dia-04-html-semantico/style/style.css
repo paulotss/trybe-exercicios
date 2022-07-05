@@ -1,0 +1,108 @@
+header.titulo {
+    padding:10px;
+    border-bottom: 1px solid black;
+}
+
+header.titulo h1 {
+    font-family: Helvetica, monospace;
+    font-weight: bold;
+    color: black;
+}
+
+.menu ul {
+    padding: 0;
+}
+
+.menu li {
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.menu li:hover {
+    background-color: black;
+    cursor:pointer;
+}
+
+.menu li a {
+    text-decoration: none;
+    color:black;
+}
+
+.menu li:hover > a {
+    color:#fc0;
+}
+
+.article {
+    padding:10px;
+}
+
+.article h1 {
+    font-family: Helvetica, monospace;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.section {
+    overflow: auto;
+    margin-bottom: 20px;
+}
+
+.section h1 {
+    font-family: Helvetica, monospace;
+    font-size: medium;
+    font-style: italic;
+}
+
+.detach {
+    font-weight: bold;
+}
+
+.section ul {
+    list-style-type:none;
+    padding: 0;
+}
+
+.section img {
+    width: 200px;
+    float:left;
+    margin-right: 10px;
+}
+
+.more {
+    float:right;
+    width: 20%;
+    background-color: black;
+    padding: 20px;
+    margin-top:20px;
+}
+
+.more h1 {
+    font-family: Helvetica, sans-serif;
+    margin-top: 0;
+    color:#fc0
+}
+
+.more a {
+    padding:10px;
+    text-align: center;
+    text-decoration: none;
+    color:#fc0;
+    border: 1px solid #fc0;
+    display: block;
+}
+
+.more a:hover {
+    background-color: #fc0;
+    color:black;
+}
+
+footer {
+    background-color: #fc0;
+    padding:20px;
+    font-family:Helvetica, sans-serif;
+}
+
+footer h1 {
+    font-size: medium;
+}

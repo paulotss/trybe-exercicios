@@ -1,0 +1,8 @@
+fieldset {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+fieldset div {
+  padding: 10px;
+}

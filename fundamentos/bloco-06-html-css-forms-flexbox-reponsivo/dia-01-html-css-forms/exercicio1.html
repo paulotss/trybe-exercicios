@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício Forms</title>
+</head>
+<body>
+  <header>
+    <h1>Exercício Forms</h1>
+  </header>
+  <main>
+    <section>
+      <form action="" method="GET">
+        <fieldset>
+          <legend>Formulário</legend>
+
+          <label for="name-id">Nome:</label>
+          <input type="text" name="name" id="name-id" maxlength="45" required>
+
+          <label for="email-id">Email:</label>
+          <input type="email" name="email" id="email-id" maxlength="45" required>
+
+          <label for="destino-sp">São Paulo</label>
+          <input type="radio" name="destino" id="destino-sp" value="sp">
+
+          <label for="destino-ce">Ceará</label>
+          <input type="radio" name="destino" id="destino-ce" value="ce">
+
+          <label for="destino-bsb">Brasília</label>
+          <input type="radio" name="destino" id="destino-bsb" value="bsb">
+
+          <label for="destino-mg">Minas Gerais</label>
+          <input type="radio" name="destino" id="destino-mg" value="mg">
+
+          <label for="description-id">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</label>
+          <textarea name="description" id="description-id" cols="30" rows="5" maxlength="145" required></textarea>
+
+          <label for="date-id">Qual a melhor data para realizar sua viagem?</label>
+          <input type="date" name="date" id="date-id" required>
+
+          <label for="newsletter-id">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</label>
+          <input type="checkbox" value="true" name="newsletter" id="newsletter-id">
+
+          <label for="photo-agree-id">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.</label>
+          <input type="checkbox" value="true" name="photo-agree" id="photo-agree-id">
+
+          <button type="submit" id="send">Enviar</button>
+          <button type="reset">Reset</button>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
