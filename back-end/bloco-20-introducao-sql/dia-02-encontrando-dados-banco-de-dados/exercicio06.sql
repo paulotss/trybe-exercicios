@@ -1,0 +1,1 @@
+SELECT name as nome_do_projeto, hours as tempo_de_trabalho FROM Scientists.Projects;

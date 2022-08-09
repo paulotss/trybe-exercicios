@@ -1,0 +1,1 @@
+SELECT name FROM Scientists.Scientists ORDER BY name ASC;

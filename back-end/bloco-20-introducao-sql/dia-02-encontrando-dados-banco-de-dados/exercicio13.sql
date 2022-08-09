@@ -1,0 +1,1 @@
+SELECT name FROM Scientists.Projects ORDER BY hours ASC LIMIT 1 OFFSET 1;
