@@ -1,0 +1,1 @@
+SELECT UCASE(first_name) AS `name` FROM hr.employees;
