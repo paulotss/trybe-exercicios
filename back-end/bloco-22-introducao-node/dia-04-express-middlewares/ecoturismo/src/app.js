@@ -6,7 +6,8 @@ const {
   nameValidation,
   priceValidation,
   descriptionValidation,
-  createdAtValidation
+  createdAtValidation,
+  ratingValidation
 } = require('./middlewares/activitiesValidation');
 
 const app = express();
@@ -16,6 +17,7 @@ app.use(nameValidation);
 app.use(priceValidation);
 app.use(descriptionValidation);
 app.use(createdAtValidation);
+app.use(ratingValidation);
 
 app.post('/activities', async (req, res) => {
   const contentFile = await fs.readFile(join(__dirname, './files/ecoturismo.json'), 'utf-8');
