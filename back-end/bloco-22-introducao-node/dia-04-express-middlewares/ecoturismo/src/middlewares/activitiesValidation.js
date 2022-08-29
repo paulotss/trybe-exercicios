@@ -56,10 +56,20 @@ const ratingValidation = (req, res, next) => {
   }
 }
 
+const difficultyValidation = (req, res, next) => {
+  const properties = [ "Fácil", "Médio", "Difícil"];
+  if(properties.some((p) => p === req.body.description.difficulty)) {
+    next();
+  } else {
+    return res.status(400).json({ "message": "O campo difficulty deve ser \'Fácil\', \'Médio\' ou \'Difícil\'" });
+  }
+}
+
 module.exports = {
   nameValidation,
   priceValidation,
   descriptionValidation,
   createdAtValidation,
   ratingValidation,
+  difficultyValidation,
 };
