@@ -1,3 +1,6 @@
+const fs = require('fs/promises');
+const { join } = require('path');
+
 const nameValidation = (req, res, next) => {
   const property = "name";
   if(property in req.body) {
@@ -65,6 +68,17 @@ const difficultyValidation = (req, res, next) => {
   }
 }
 
+const tokenValidation = async (req, res, next) => {
+  const token = req.header('X-API-TOKEN');
+  const contentFile = await fs.readFile(join(__dirname, '../files/users.json'), 'utf-8');
+  const users = JSON.parse(contentFile);
+  if(users.some((u) => u.token === token)) {
+    next();
+  } else {
+    return res.status(401).json({ "message": "Token inválido!" });
+  }
+}
+
 module.exports = {
   nameValidation,
   priceValidation,
@@ -72,4 +86,5 @@ module.exports = {
   createdAtValidation,
   ratingValidation,
   difficultyValidation,
+  tokenValidation,
 };

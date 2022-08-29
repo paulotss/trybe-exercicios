@@ -1,32 +1,28 @@
 const express = require('express');
 const fs = require('fs/promises');
+const activitiesRoute = require('./routes/activitiesRoute');
 const { join } = require('path');
+const crypto = require('crypto');
 require('express-async-errors');
-const { 
-  nameValidation,
-  priceValidation,
-  descriptionValidation,
-  createdAtValidation,
-  ratingValidation,
-  difficultyValidation
-} = require('./middlewares/activitiesValidation');
 
 const app = express();
 
 app.use(express.json());
-app.use(nameValidation);
-app.use(priceValidation);
-app.use(descriptionValidation);
-app.use(createdAtValidation);
-app.use(ratingValidation);
-app.use(difficultyValidation);
+app.use('/activities', activitiesRoute);
 
-app.post('/activities', async (req, res) => {
-  const contentFile = await fs.readFile(join(__dirname, './files/ecoturismo.json'), 'utf-8');
-  const activities = JSON.parse(contentFile);
-  activities.push(req.body);
-  await fs.writeFile(join(__dirname, './files/ecoturismo.json'), JSON.stringify(activities));
-  res.status(201).json({ "message": "Atividade cadastrada com sucesso!" });
-});
+app.post('/signup', async (req, res) => {
+  const properties = ["email", "password", "firstName", "phone"];
+  if(properties.every((p) => p in req.body)) {
+    const contentFile = await fs.readFile(join(__dirname, './files/users.json'), 'utf-8');
+    const users = JSON.parse(contentFile);
+    const token = crypto.randomBytes(8).toString('hex');
+    req.body.token = token;
+    users.push(req.body);
+    await fs.writeFile(join(__dirname, './files/users.json'), JSON.stringify(users));
+    return res.status(200).json({ "token": `"${token}"` });
+  } else {
+    return res.sendStatus(401);
+  }
+})
 
 module.exports = app;

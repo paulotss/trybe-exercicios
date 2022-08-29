@@ -1,0 +1,16 @@
+[
+  {
+    "token": "XXXXXXX",
+    "email": "paulo.oinab@gmail.com",
+    "password": "123456",
+    "firstName": "Paulo",
+    "phone": "98585218"
+  },
+  {
+    "email": "paulo.oinab@gmail.com",
+    "password": "123456",
+    "firstName": "Paulo",
+    "phone": "98585218",
+    "token": "5393b3ca82b7315e"
+  }
+]
