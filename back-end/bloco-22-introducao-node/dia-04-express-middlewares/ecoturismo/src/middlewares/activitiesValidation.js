@@ -37,8 +37,19 @@ const descriptionValidation = (req, res, next) => {
   next();
 }
 
+//Função não cumpre com o requisito, só para ilustrar
+const createdAtValidation = (req, res, next) => {
+  const date = Date.parse(req.body.description.createdAt);
+  if(isNaN(date)) {
+    return res.status(400).json({"message": "O campo createdAt deve ter o formato \'dd/mm/aaaa\'"});
+  } else {
+    next();
+  }
+}
+
 module.exports = {
   nameValidation,
   priceValidation,
-  descriptionValidation
+  descriptionValidation,
+  createdAtValidation
 };
