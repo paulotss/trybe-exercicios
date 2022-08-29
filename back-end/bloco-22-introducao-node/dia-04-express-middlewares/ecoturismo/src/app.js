@@ -2,10 +2,12 @@ const express = require('express');
 const fs = require('fs/promises');
 const { join } = require('path');
 require('express-async-errors');
+const activitiesValidation = require('./middlewares/activitiesValidation');
 
 const app = express();
 
 app.use(express.json());
+app.use(activitiesValidation);
 
 app.post('/activities', async (req, res) => {
   const contentFile = await fs.readFile(join(__dirname, './files/ecoturismo.json'), 'utf-8');
