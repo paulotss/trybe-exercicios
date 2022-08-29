@@ -24,7 +24,21 @@ const priceValidation = (req, res, next) => {
   }
 }
 
+const descriptionValidation = (req, res, next) => {
+  const properties = ["createdAt", "rating", "difficulty"];
+  if(!("description" in req.body)) {
+    return res.status(400).json({ "message": "O campo description é obrigatório" });
+  }
+  properties.forEach((prop) => {
+    if(!(prop in req.body.description)) {
+      return res.status(400).json({ "message": `O campo ${prop} é obrigatório` });
+    }
+  })
+  next();
+}
+
 module.exports = {
   nameValidation,
-  priceValidation
+  priceValidation,
+  descriptionValidation
 };
