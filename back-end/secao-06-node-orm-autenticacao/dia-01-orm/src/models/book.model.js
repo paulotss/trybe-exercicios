@@ -5,6 +5,9 @@ const BookModel = (sequelize, DataTypes) => {
     pageQuantity: DataTypes.INTEGER,
     createdAt: DataTypes.DATE,
     updatedAt: DataTypes.DATE,
+  },
+  {
+    tableName: 'books',
   });
   return Book;
 };
