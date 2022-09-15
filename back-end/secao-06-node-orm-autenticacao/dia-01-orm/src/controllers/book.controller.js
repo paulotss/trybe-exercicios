@@ -12,7 +12,14 @@ const getById = async (req, res) => {
   res.status(200).json(result);
 }
 
+const create = async (req, res) => {
+  const book = req.body;
+  const result = await bookService.create(book);
+  res.status(201).json(result);
+}
+
 module.exports = {
   getAll,
   getById,
+  create,
 };
