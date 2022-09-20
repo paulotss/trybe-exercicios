@@ -18,8 +18,16 @@ const create = async (req, res) => {
   res.status(201).json(result);
 }
 
+const update = async (req, res) => {
+  const { id } = req.params;
+  const book = req.body;
+  const result = await bookService.update(id, book);
+  res.status(201).json(result);
+}
+
 module.exports = {
   getAll,
   getById,
   create,
+  update,
 };
