@@ -21,8 +21,14 @@ const create = async (req, res) => {
 const update = async (req, res) => {
   const { id } = req.params;
   const book = req.body;
-  const result = await bookService.update(id, book);
-  res.status(201).json(result);
+  await bookService.update(id, book);
+  res.status(200).json("Book updated");
+}
+
+const remove = async (req, res) => {
+  const { id } = req.params;
+  await bookService.remove(id);
+  res.status(200).json("Book removed");
 }
 
 module.exports = {
@@ -30,4 +36,5 @@ module.exports = {
   getById,
   create,
   update,
+  remove,
 };
