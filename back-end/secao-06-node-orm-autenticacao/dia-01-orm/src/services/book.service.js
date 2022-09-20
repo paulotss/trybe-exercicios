@@ -25,10 +25,16 @@ const remove = async (id) => {
  return result;
 }
 
+const getByAuthor = async (author) => {
+  const result = await Book.findOne({ where: { author } });
+  return result;
+}
+
 module.exports = {
   getAll,
   getById,
   create,
   update,
   remove,
+  getByAuthor,
 };
