@@ -4,4 +4,6 @@ use('class')
 
 //db.superheroes.find().limit(10);
 
-db.superheroes.find({"aspects.height": {$lt: 180}});
+//db.superheroes.find({"aspects.height": {$lt: 180}});
+
+db.superheroes.find({"aspects.height": {$lt: 180}}).count();
