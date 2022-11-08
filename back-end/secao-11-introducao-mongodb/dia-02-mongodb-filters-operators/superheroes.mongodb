@@ -26,7 +26,12 @@ use('class')
 
 //db.superheroes.find({"aspects.height": {$not: {$gt: 180}}}).count();
 
-db.superheroes.find({$nor: [
-  {race: "Human"},
-  {"aspects.height": {$gt: 180}}
-]});
+// db.superheroes.find({$nor: [
+//   {race: "Human"},
+//   {"aspects.height": {$gt: 180}}
+// ]});
+
+db.superheroes.find({
+  "publisher": "Marvel Comics",
+  "aspects.height": {$in: [200, 180]}
+});
