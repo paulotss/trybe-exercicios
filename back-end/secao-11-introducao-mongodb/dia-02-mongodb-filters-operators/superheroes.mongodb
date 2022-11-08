@@ -47,3 +47,5 @@ use('class')
 //db.superheroes.find({"aspects.hairColor": {$exists: true}}).count();
 
 //db.superheroes.deleteOne({publisher: "Sony Pictures"});
+
+db.superheroes.deleteMany({publisher: "George Lucas"});
