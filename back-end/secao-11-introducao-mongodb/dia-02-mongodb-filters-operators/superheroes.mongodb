@@ -31,7 +31,13 @@ use('class')
 //   {"aspects.height": {$gt: 180}}
 // ]});
 
-db.superheroes.find({
-  "publisher": "Marvel Comics",
-  "aspects.height": {$in: [200, 180]}
-});
+// db.superheroes.find({
+//   "publisher": "Marvel Comics",
+//   "aspects.height": {$in: [200, 180]}
+// });
+
+db.superheroes.find({$and: [
+  {"aspects.weight": {$gte: 80, $lte: 100}},
+  {$or: [{race: "Mutant"}, {race: "Human"}]},
+  {publisher: {$not: "DC Comics"}}
+]});
