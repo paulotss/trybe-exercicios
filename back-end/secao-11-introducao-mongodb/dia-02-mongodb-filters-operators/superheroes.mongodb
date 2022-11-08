@@ -18,4 +18,6 @@ use('class')
 
 //db.superheroes.find({"aspects.eyeColor": "blue"}).count();
 
+//db.superheroes.find({"aspects.hairColor": {$in: ["No Hair", "black"]}})
+
 db.superheroes.find({"aspects.hairColor": {$in: ["No Hair", "black"]}}).count();
