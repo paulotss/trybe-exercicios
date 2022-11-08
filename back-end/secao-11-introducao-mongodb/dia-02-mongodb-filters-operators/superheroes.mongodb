@@ -1,3 +1,7 @@
 use('class')
 
-db.superheroes.countDocuments();
+//db.superheroes.countDocuments();
+
+//db.superheroes.find().limit(10);
+
+db.superheroes.find({"aspects.height": {$lt: 180}});
