@@ -42,4 +42,6 @@ use('class')
 //   {publisher: {$not: "DC Comics"}}
 // ]});
 
-db.superheroes.find({race: {$exists: false}});
+//db.superheroes.find({race: {$exists: false}}).count();
+
+db.superheroes.find({"aspects.hairColor": {$exists: true}}).count();
