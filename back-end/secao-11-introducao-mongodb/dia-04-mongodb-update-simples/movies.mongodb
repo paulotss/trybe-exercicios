@@ -23,8 +23,12 @@ use('class');
 //   $inc: {imdbRating: 2}
 // })
 
-db.movies.updateOne({title: "Home Alone"}, {
-  $inc: {budget: 5}
+// db.movies.updateOne({title: "Home Alone"}, {
+//   $inc: {budget: 5}
+// })
+
+db.movies.updateOne({title: "Batman"}, {
+  $mul: {budget: 4}
 })
 
 db.movies.find();
