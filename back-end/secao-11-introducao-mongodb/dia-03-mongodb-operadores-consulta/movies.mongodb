@@ -5,6 +5,10 @@
 //   imdbRating: {$gt: 7}
 // })
 
+// db.movies.find({
+//   ratings: {$elemMatch: {$gt: 103}}
+// }, {title: 1, ratings: 1, _id: 0})
+
 db.movies.find({
-  ratings: {$elemMatch: {$gt: 103}}
+  ratings: {$elemMatch: {$gte: 100, $lte: 105}}
 }, {title: 1, ratings: 1, _id: 0})
