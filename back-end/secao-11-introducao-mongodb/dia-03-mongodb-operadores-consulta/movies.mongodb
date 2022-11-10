@@ -42,11 +42,15 @@
 //   ]
 // }, {title: 1, ratings: 1, category: 1, _id: 0})
 
+// db.movies.find({
+//   ratings: {$size: 4},
+//   $or: [
+//     {category: {$all: ["adventure"]}},
+//     {category: {$all: ["family"]}}
+//   ],
+//   imdbRating: {$not: {$lte: 7}}
+// })
+
 db.movies.find({
-  ratings: {$size: 4},
-  $or: [
-    {category: {$all: ["adventure"]}},
-    {category: {$all: ["family"]}}
-  ],
-  imdbRating: {$not: {$lte: 7}}
+  description: {$regex: /^The/i}
 })
