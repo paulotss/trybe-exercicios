@@ -35,9 +35,18 @@
 //   category: {$size: 2}
 // })
 
+// db.movies.find({
+//   $or: [
+//     {category: {$all: ["sci-fi"]}},
+//     {ratings: {$elemMatch: {$gt: 199}}}
+//   ]
+// }, {title: 1, ratings: 1, category: 1, _id: 0})
+
 db.movies.find({
+  ratings: {$size: 4},
   $or: [
-    {category: {$all: ["sci-fi"]}},
-    {ratings: {$elemMatch: {$gt: 199}}}
-  ]
-}, {title: 1, ratings: 1, category: 1, _id: 0})
+    {category: {$all: ["adventure"]}},
+    {category: {$all: ["family"]}}
+  ],
+  imdbRating: {$not: {$lte: 7}}
+})
