@@ -69,22 +69,53 @@ use("cinema");
 //   arrayFilters: [{"element.actor": "Daniel Stern"}]
 // })
 
+// db.movies.updateOne({title: "Batman"}, {
+//   $push: {
+//     cast: {
+//       $each: [
+//         {
+//           "character": "Batman"
+//         },
+//         {
+//           "character": "Alfred"
+//         },
+//         {
+//           "character": "Coringa"
+//         }
+//       ]
+//     }
+//   }
+// })
+
 db.movies.updateOne({title: "Batman"}, {
-  $push: {
-    cast: {
-      $each: [
-        {
-          "character": "Batman"
-        },
-        {
-          "character": "Alfred"
-        },
-        {
-          "character": "Coringa"
-        }
-      ]
+  $addToSet: {
+    "cast.$[element].actor": {
+      $each: ["Christian Bale"]
     }
   }
+},{
+  arrayFilters: [{"element.character": "Batman"}]
 })
+
+db.movies.updateOne({title: "Batman"}, {
+  $addToSet: {
+    "cast.$[element].actor": {
+      $each: ["Michael Caine"]
+    }
+  }
+},{
+  arrayFilters: [{"element.character": "Alfred"}]
+})
+
+db.movies.updateOne({title: "Batman"}, {
+  $addToSet: {
+    "cast.$[element].actor": {
+      $each: ["Heath Ledger"]
+    }
+  }
+},{
+  arrayFilters: [{"element.character": "Coringa"}]
+})
+
 
 db.movies.find();
