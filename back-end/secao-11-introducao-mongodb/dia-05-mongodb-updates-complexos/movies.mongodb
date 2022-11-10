@@ -6,14 +6,20 @@ use("cinema");
 //   }
 // })
 
+// db.movies.updateOne({title: "Batman"}, {
+//   $push: {
+//     category: {
+//       $each: [
+//         "villain",
+//         "comic-based"
+//       ]
+//     }
+//   }
+// })
+
 db.movies.updateOne({title: "Batman"}, {
-  $push: {
-    category: {
-      $each: [
-        "villain",
-        "comic-based"
-      ]
-    }
+  $pop: {
+    category: -1
   }
 })
 
