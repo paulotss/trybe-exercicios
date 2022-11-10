@@ -50,8 +50,12 @@ use('class');
 //   }
 // })
 
+// db.movies.updateMany({}, {
+//   $set: {sequels: 0}
+// })
+
 db.movies.updateMany({}, {
-  $set: {sequels: 0}
+  $unset: {budget: "", estimatedBudget: ""}
 })
 
 db.movies.find();
