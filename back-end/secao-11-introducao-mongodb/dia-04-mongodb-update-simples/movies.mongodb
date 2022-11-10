@@ -19,8 +19,12 @@ use('class');
 //   }
 // })
 
-db.movies.updateOne({title: "Batman"}, {
-  $inc: {imdbRating: 2}
+// db.movies.updateOne({title: "Batman"}, {
+//   $inc: {imdbRating: 2}
+// })
+
+db.movies.updateOne({title: "Home Alone"}, {
+  $inc: {budget: 5}
 })
 
 db.movies.find();
