@@ -1,1 +1,6 @@
-db.movies.find({category: {$all: ["adventure"]}});
+//db.movies.find({category: {$all: ["adventure"]}});
+
+db.movies.find({
+  category: {$all: ["sci-fi", "action"]},
+  imdbRating: {$gt: 7}
+})
