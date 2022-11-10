@@ -54,8 +54,14 @@ use('class');
 //   $set: {sequels: 0}
 // })
 
-db.movies.updateMany({}, {
-  $unset: {budget: "", estimatedBudget: ""}
+// db.movies.updateMany({}, {
+//   $unset: {budget: "", estimatedBudget: ""}
+// })
+
+db.movies.updateMany({
+  title: {$in: ["Batman", "Home Alone"]},
+  }, {
+    $max: {imdbRating: 17}
 })
 
 db.movies.find();
