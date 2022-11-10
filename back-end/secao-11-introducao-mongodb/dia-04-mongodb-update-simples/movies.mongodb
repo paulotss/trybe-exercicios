@@ -27,8 +27,12 @@ use('class');
 //   $inc: {budget: 5}
 // })
 
+// db.movies.updateOne({title: "Batman"}, {
+//   $mul: {budget: 4}
+// })
+
 db.movies.updateOne({title: "Batman"}, {
-  $mul: {budget: 4}
+  $rename: {budget: "estimatedBudget"}
 })
 
 db.movies.find();
