@@ -87,34 +87,45 @@ use("cinema");
 //   }
 // })
 
+// db.movies.updateOne({title: "Batman"}, {
+//   $addToSet: {
+//     "cast.$[element].actor": {
+//       $each: ["Christian Bale"]
+//     }
+//   }
+// },{
+//   arrayFilters: [{"element.character": "Batman"}]
+// })
+
+// db.movies.updateOne({title: "Batman"}, {
+//   $addToSet: {
+//     "cast.$[element].actor": {
+//       $each: ["Michael Caine"]
+//     }
+//   }
+// },{
+//   arrayFilters: [{"element.character": "Alfred"}]
+// })
+
+// db.movies.updateOne({title: "Batman"}, {
+//   $addToSet: {
+//     "cast.$[element].actor": {
+//       $each: ["Heath Ledger"]
+//     }
+//   }
+// },{
+//   arrayFilters: [{"element.character": "Coringa"}]
+// })
+
 db.movies.updateOne({title: "Batman"}, {
-  $addToSet: {
+  $push: {
     "cast.$[element].actor": {
-      $each: ["Christian Bale"]
+      $each: ["Michael Keaton", "Val Kilmer", "George Clooney"],
+      $sort: 1
     }
   }
-},{
+}, {
   arrayFilters: [{"element.character": "Batman"}]
-})
-
-db.movies.updateOne({title: "Batman"}, {
-  $addToSet: {
-    "cast.$[element].actor": {
-      $each: ["Michael Caine"]
-    }
-  }
-},{
-  arrayFilters: [{"element.character": "Alfred"}]
-})
-
-db.movies.updateOne({title: "Batman"}, {
-  $addToSet: {
-    "cast.$[element].actor": {
-      $each: ["Heath Ledger"]
-    }
-  }
-},{
-  arrayFilters: [{"element.character": "Coringa"}]
 })
 
 
