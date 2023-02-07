@@ -25,6 +25,21 @@ class BaralhoIterator(Iterator):
             return carta
 
 
+class BaralhoIteratorInverso(Iterator):
+    def __init__(self, cartas):
+        self._cartas = cartas
+        self._count = 0
+
+    def __next__(self):
+        try:
+            carta = self._cartas[self._count]
+        except IndexError:
+            raise StopIteration()
+        else:
+            self._count -= 1
+            return carta
+
+
 class Baralho(Iterable):
     naipes = 'copas ouros espadas paus'.split()
     valores = 'A 2 3 4 5 6 7 8 9 10 J Q K'.split()
@@ -43,7 +58,13 @@ class Baralho(Iterable):
         return BaralhoIterator(self._cartas)
 
 
+class BaralhoInverso(Baralho):
+
+    def __iter__(self):
+        return BaralhoIteratorInverso(self._cartas)
+
+
 if __name__ == "__main__":
-    baralho = Baralho()
+    baralho = BaralhoInverso()
     for carta in baralho:
         print(carta)
